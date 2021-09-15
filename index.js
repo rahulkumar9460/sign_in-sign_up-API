@@ -20,5 +20,5 @@ app.use(express.json());
 app.use('/api/user', authRoute);
 app.use('/api/user', homeRoute);
 
-
-app.listen(3000, () => console.log('Surver up and running'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log('Surver up and running'));
